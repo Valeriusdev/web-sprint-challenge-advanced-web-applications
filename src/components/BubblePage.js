@@ -7,6 +7,10 @@ import fetchColorService from '../services/fetchColorService';
 const BubblePage = () => {
   const [colors, setColors] = useState([]);
   const [editing, setEditing] = useState(false);
+  
+  useEffect(()=>{
+    fetchColorService();
+  },[]);
 
   const toggleEdit = (value) => {
     setEditing(value);
